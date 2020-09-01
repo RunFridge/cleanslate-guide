@@ -16,7 +16,7 @@ Not all installations are required, just install what suits yourself.
 
 - General Tools
   - [Chocolatey](https://chocolatey.org/install): CLI tool for application management
-  - **Choco Packages**
+  - *Choco Packages*
     - [Git](https://chocolatey.org/packages/git) - Git version control
       ```sh
       choco install git
@@ -87,7 +87,7 @@ Not all installations are required, just install what suits yourself.
 - Browsers
   - [Brave Browser](https://brave.com/): Browser for general web browsing
   - [Chrome](https://www.google.com/chrome/): Broswer for general dev tools
-  - **Chrome Extensions**
+  - *Chrome Extensions*
     - [JSONView](https://chrome.google.com/webstore/detail/jsonview/chklaanhfefbnpoihckbnefhakgolnmc?hl=en): Prettify JSON
     - [Page Ruler](https://chrome.google.com/webstore/detail/page-ruler-redux/giejhjebcalaheckengmchjekofhhmal?hl=en): Pixel ruler
     - [ColorZilla](https://chrome.google.com/webstore/detail/colorzilla/bhlhnicpbhignbdhedgjhgdocnmhomnp?hl=en): Color pallet
@@ -95,7 +95,7 @@ Not all installations are required, just install what suits yourself.
 
 - Editors
   - [Visual Studio Code](https://code.visualstudio.com/): Code Editor
-  - **VSC Extensions**
+  - *VSC Extensions*
     - Prettier
     - ESLint
     - Remote - WSL
