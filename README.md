@@ -115,7 +115,9 @@ Not all installations are required, just install what suits yourself.
   - [Typora](https://typora.io/): Markdown Editing
 
 - Archive Management
+
   - [Bandizip](https://kr.bandisoft.com/bandizip/): Minimal archive program
+
 - Multimedia
 
   - [Kakao Pot Player](https://tv.kakao.com/guide/potplayer): Video player with basic codec support
@@ -126,13 +128,18 @@ Not all installations are required, just install what suits yourself.
 
 - Task Management
 
-  - [Notion](https://www.notion.so/): Task / Schedule management
+  - [Notion](https://www.notion.so/): Task / Schedule management\
+
+- Web Development
+
+  - [WAMP](https://bitnami.com/stack/wamp/installer): WAMP Bitnami Server
 
 - Miscellaneous
   - [Postman](https://www.postman.com/): API Dev tool
   - [Zeplin](https://zeplin.io/): Designer collaboration tool
   - [DarkNamver](https://software.naver.com/software/summary.nhn?softwareId=GWS_000169): File name editor
   - [Hoax Eliminator](https://teus.me/690): Eliminates Korean security hoax tools
+  - [모두의 프린터](https://modu-print.tistory.com/): Virtual Printer for creating PDF
 
 #### VSC Settings
 
