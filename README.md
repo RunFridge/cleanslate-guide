@@ -144,6 +144,7 @@ Not all installations are required, just install what suits yourself.
 
 #### VSC Settings
 
+##### [settings.json]
 ```json
 {
   "workbench.colorTheme": "Material Theme Darker High Contrast",
@@ -177,4 +178,31 @@ Not all installations are required, just install what suits yourself.
   "python.languageServer": "Microsoft",
   "C_Cpp.updateChannel": "Insiders"
 }
+```
+##### [keybindings.json]
+```json
+[
+  {
+    "key": "ctrl+alt+oem_period",
+    "command": "workbench.action.terminal.focusNext"
+  },
+  {
+    "key": "ctrl+alt+oem_comma",
+    "command": "workbench.action.terminal.focusPrevious"
+  },
+  {
+    "key": "ctrl+`",
+    "command": "workbench.action.terminal.focus", 
+    "when": "!terminalFocus"
+  },
+  {
+    "key": "ctrl+`",
+    "command": "workbench.action.focusActiveEditorGroup", 
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+shift+/",
+    "command": "editor.action.toggleWordWrap"
+  }
+]
 ```
