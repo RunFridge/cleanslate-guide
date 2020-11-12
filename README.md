@@ -47,6 +47,9 @@ Not all installations are required, just install what suits yourself.
       ```
 
     - [Python](https://chocolatey.org/packages/python/) - Install any preferred version ([Check here for stable version](https://www.python.org/downloads/))
+        - [Pipenv](https://github.com/pypa/pipenv): Python package management
+        - [Black](https://github.com/psf/black): Python Formatter
+        - [Flake8](https://flake8.pycqa.org/en/latest/): Python Style Guide enforcer
 
     - [Windows Terminal](https://chocolatey.org/packages/microsoft-windows-terminal)
       ```sh
@@ -102,6 +105,14 @@ Not all installations are required, just install what suits yourself.
     - [Page Ruler](https://chrome.google.com/webstore/detail/page-ruler-redux/giejhjebcalaheckengmchjekofhhmal?hl=en): Pixel ruler
     - [ColorZilla](https://chrome.google.com/webstore/detail/colorzilla/bhlhnicpbhignbdhedgjhgdocnmhomnp?hl=en): Color pallet
     - [Vimium](https://chrome.google.com/webstore/detail/vimium/dbepggeogbaibhgnhhndojpepiihcmeb?hl=en): Borwser keyboard control
+    - [Daily Dev](https://daily.dev/): Daily dev news tab
+    - [Dark Reader](https://chrome.google.com/webstore/detail/dark-reader/eimadpbcbfnmbkopoojfekhnkhdbieeh?hl=en): Dark Mode on non-supported pages
+    - [Github Isometric Contributions](https://chrome.google.com/webstore/detail/github-isometric-contribu/mjoedlfflcchnleknnceiplgaeoegien): 3D Github grass
+    - [React Developer Tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en): Devtool for ReactJS
+    - [Redux Developer Tools](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd): Devtool for Redux
+    - [Wappalyzer](https://www.wappalyzer.com/download/): Analyze tech stack of a web page
+    - [Axe](https://chrome.google.com/webstore/detail/axe-web-accessibility-tes/lhdoppojpmngadmnindnejefpokejbdd): Accessibility Checker
+    - [Lighthouse](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk): Website analyzer (by Google)
   - [Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/developer/): Browser for CSS dev tools
 
 - Editors
@@ -179,6 +190,7 @@ Not all installations are required, just install what suits yourself.
   "C_Cpp.updateChannel": "Insiders"
 }
 ```
+
 ##### [keybindings.json]
 ```json
 [
