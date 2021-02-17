@@ -55,6 +55,11 @@ Not all installations are required, just install what suits yourself.
       ```sh
       choco install microsoft-windows-terminal
       ```
+    - [Altair-GraphQL-Client](https://chocolatey.org/packages/altair-graphql)- GraphQL Development Tool
+      ```sh
+      choco install altair-graphql 
+      ```
+
 
 - [Install Ubuntu from Microsoft Store](https://www.microsoft.com/en-us/p/ubuntu/9nblggh4msv6)
 
