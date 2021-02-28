@@ -153,6 +153,9 @@ Not all installations are required, just install what suits yourself.
 
 - Miscellaneous
   - [Postman](https://www.postman.com/): API Dev tool
+  - [Insomnia](https://insomnia.rest/): Rest client dev tool
+  - [DBeaver](https://dbeaver.io/): Universal database tool
+  - [Altair GraphQL Client](https://altair.sirmuel.design/): GraphQL Dev tool
   - [Zeplin](https://zeplin.io/): Designer collaboration tool
   - [DarkNamver](https://software.naver.com/software/summary.nhn?softwareId=GWS_000169): File name editor
   - [Hoax Eliminator](https://teus.me/690): Eliminates Korean security hoax tools
