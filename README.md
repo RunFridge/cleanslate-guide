@@ -6,7 +6,7 @@
 
 ## Instructions
 
-Not all installations are required, just install what suits yourself.
+Not all installations are required, just install what suits you.
 
 #### Prerequisite
 
