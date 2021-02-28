@@ -226,3 +226,46 @@ Not all installations are required, just install what suits yourself.
   }
 ]
 ```
+
+##### Git Settings
+> Following is my .gitconfig settings on ~
+```
+[user]
+    email = MY_EMAIL
+    name = MY_NAME
+[core]
+    autocrlf = true
+[alias]
+    co = checkout
+    c = commit
+    cm = commit -m
+    st = status
+    br = branch
+    hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short 
+    type = cat-file -t
+    dump = cat-file -p
+    pom = push origin master
+```
+
+##### Vim Settings
+> Following is my .vimrc settings on ~
+```
+syntax on
+
+set noerrorbells
+set tabstop=4 softtabstop=4
+set shiftwidth=4
+set expandtab
+set smartindent
+set nu
+set nowrap
+set smartcase
+set noswapfile
+set nobackup
+set undodir=~/.vim/undodir
+set undofile
+set incsearch
+
+set colorcolumn=80
+highlight ColorColumn ctermbg=0 guibg=lightgrey
+```
