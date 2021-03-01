@@ -55,6 +55,9 @@ Not all installations are required, just install what suits you.
       ```sh
       choco install microsoft-windows-terminal
       ```
+
+      > Update terminal theme with [oh-my-posh](https://ohmyposh.dev/docs/)
+
     - [Altair-GraphQL-Client](https://chocolatey.org/packages/altair-graphql)- GraphQL Development Tool
       ```sh
       choco install altair-graphql 
@@ -268,4 +271,34 @@ set incsearch
 
 set colorcolumn=80
 highlight ColorColumn ctermbg=0 guibg=lightgrey
+```
+
+##### Powershelff $PROFILE settings
+> Following is my $PROFILE (MicrosoftPowerShell_profile.ps1) settings
+```ps
+$code = 
+{
+    # submit the host process RawUI interface and the execution context
+    param($RawUi)
+
+    do
+    {
+        # compose the time and date display
+        $time = Get-Date -Format 'hh:mm:ss tt'
+        # output the information to the title bar of the host process
+        $RawUI.WindowTitle = $time
+        # wait a half second
+        Start-Sleep -Milliseconds 500
+    } while ($true)
+}
+$ps = [PowerShell]::Create()
+$null = $ps.AddScript($code).AddArgument($host.UI.RawUI)
+$handle = $ps.BeginInvoke()
+
+$DefaultUser = 'USERNAME'
+Import-Module posh-git
+Import-Module oh-my-posh
+Set-Theme Agnoster
+
+$null = New-PSDrive -Name "wd" -PSProvider "filesystem" -Root  "WORKING_DIRECTORY"
 ```
