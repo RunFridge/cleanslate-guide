@@ -1,304 +1,147 @@
+<p align="center">
+	<img src="https://noticon-static.tammolo.com/dgggcrkxq/image/upload/v1574221064/noticon/xjal9z4a8h46soi6ktgo.png" width="100"/>
+</p>
+
+
 # 🧼 Cleanslate Guide
 
-![](https://img.shields.io/github/license/RunFridge/cleanslate-guide)
+[![Author](https://img.shields.io/badge/author-RunFridge-green?style=flat)](https://github.com/hwhang0917) ![License](https://img.shields.io/github/license/RunFridge/cleanslate-guide) 
 
-> This guide instructs users to set a new "celan-slate" operating system when starting a new PC.
+> This guide instructs users to setup new windows 10 when starting a new PC, hence "clean-slate".
 
-## Instructions
+## Table of Contents
 
-Not all installations are required, just install what suits you.
+[TOC]
 
-#### Prerequisite
+## Goal
 
-- System
-  - Windows 10 Version 2004 (Install the latest Windows 10 Update)
+Originally, this repository was set up so I can quickly setup formatted PC for my developing environment. It is to help user set up native windows environment with versatile version management, readability, and style. However many of the software here are merely recommendation by personal taste, so you can install what suits you. If there are suggestions or error in this document feel free to leave an issue or make a pull request.
 
-#### Recommanded Softwares
+## Before Installing
 
-- General Tools
+- System Requirements
+  - Windows 10 Version 2004 (*check the [latest Windows 10 update](ms-settings:windowsupdate?activationSource=SMC-IA-4027667)*)
+- Browser Requirements
+  - Chromium based browser (*preferably [Brave browser](https://brave.com/)*)
+- Installation marked with <img src="https://chocolatey.org/content/images/global-shared/logo-square.svg" width="50"/> can be installed with [chocolatey package manager](https://chocolatey.org/)
+- **Always check the original software site's reference/manual before installing**
 
-  - [Chocolatey](https://chocolatey.org/install): CLI tool for application management
-  - _Choco Packages_
+## Initial Setup
 
-    - [Git](https://chocolatey.org/packages/git) - Git version control
+These are some required software before starting other setups.
 
-      ```sh
-      choco install git
-      ```
+| Software Name    | Description                                                  | Installation                                                 | Reference                                                    | Required |
+| ---------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | -------- |
+| Chocolatey       | Windows Package Manager                                      | [![](https://img.shields.io/badge/Install-blue)](https://chocolatey.org/install) | [![](https://img.shields.io/badge/Reference-green)](https://docs.chocolatey.org/en-us/choco/setup) | ✅        |
+| Windows Terminal | Terminal supporting UTF-8, GPU acceleration, styling, and more | [![](https://img.shields.io/badge/Install-blue)](https://github.com/microsoft/terminal#installing-and-running-windows-terminal) or <img src="https://chocolatey.org/content/images/global-shared/logo-square.svg" width="50"/> | [![](https://img.shields.io/badge/Reference-green)](https://github.com/microsoft/terminal) | ✅        |
+| MesloLGS font    | Nerdy font for terminal, editor, and more                    | [![](https://img.shields.io/badge/Install-blue)](https://github.com/romkatv/dotfiles-public/tree/master/.local/share/fonts/NerdFonts) |                                                              |          |
 
-    - [Mingiw](https://chocolatey.org/packages/mingw) - Minimalist GNU Compiler
+## [Node.JS](https://nodejs.org/en/)
 
-      ```sh
-      choco install mingw
-      ```
+1. Install [NVM-windows](https://github.com/coreybutler/nvm-windows/wiki#installation) [![](https://img.shields.io/badge/Reference-green)](https://github.com/coreybutler/nvm-windows)
 
-    - [NVM](https://chocolatey.org/packages/nvm) - Node Version Manager (Check this link for [nvm-windows](https://github.com/coreybutler/nvm-windows))
+   nvm-windows is a windows version of Node Version Manager; to change between different Node.JS version
 
-      ```sh
-      choco install nvm
-      ```
+2. Using nvm install the preferred Node.JS version `nvm install <version>`
 
-      Then, install Node.js LTS or other versions
+   check [this page](https://nodejs.org/en/about/releases/) or type `nvm list available` in terminal to check available Node versions.
 
-    - [Yarn](https://chocolatey.org/packages/yarn) - Yarn Package Manager
+3. Type `nvm use <version>` to use the installed version.
 
-      ```sh
-      choco install yarn
-      ```
+4. Check if the correct Node.JS version is installed via `node --version` command (also `npm --version` if possible)
 
-    - [Python](https://chocolatey.org/packages/python/) - Install any preferred version ([Check here for stable version](https://www.python.org/downloads/))
-        - [Pipenv](https://github.com/pypa/pipenv): Python package management
-        - [Black](https://github.com/psf/black): Python Formatter
-        - [Flake8](https://flake8.pycqa.org/en/latest/): Python Style Guide enforcer
+## [Python](https://www.python.org/)
 
-    - [Windows Terminal](https://chocolatey.org/packages/microsoft-windows-terminal)
-      ```sh
-      choco install microsoft-windows-terminal
-      ```
+1. Install [pyenv-win](https://github.com/pyenv-win/pyenv-win#installation) [![](https://img.shields.io/badge/Git%20reference-green)](https://github.com/pyenv-win/pyenv-win)
 
-      > Update terminal theme with [oh-my-posh](https://ohmyposh.dev/docs/)
+   pyenv-win is a windows version of Python version manager (pyenv); to change between different Python version
+   
+   possible with chocolatey command [![](https://img.shields.io/badge/Reference-green)](https://chocolatey.org/packages/pyenv-win) <img src="https://chocolatey.org/content/images/global-shared/logo-square.svg" width="50"/>
+   
+   ```sh
+   choco install pyenv-win
+   ```
+   
+2. In windows settings [Apps & Features](ms-settings:appsfeatures), then go to App execution aliases or in window search type `Manage app execution aliases`
 
-    - [Altair-GraphQL-Client](https://chocolatey.org/packages/altair-graphql)- GraphQL Development Tool
-      ```sh
-      choco install altair-graphql 
-      ```
+   then disable `python` and `python3` command from opening Microsoft Store App
 
+3. Using pyenv-win install the preferred python version `pyenv install <version>`
 
-- [Install Ubuntu from Microsoft Store](https://www.microsoft.com/en-us/p/ubuntu/9nblggh4msv6)
+   check [this page](https://www.python.org/downloads/) or type `pyenv install -l` in terminal to check available Python versions.
 
-- [WSL 2 Installation & Settings](https://docs.microsoft.com/en-us/windows/wsl/install-win10#update-to-wsl-2)
+4. Type `pyenv global <version>` to set python version to be used globally
 
-- Windows Terminal Setting
+   Use `pyenv local <version>` to set python version for a specific directory
 
-  1. Download and install [MesloLGS NF](https://github.com/romkatv/dotfiles-public/tree/master/.local/share/fonts/NerdFonts) Fonts
-  2. Add the following schema in `settings.json` under `"schemes": []` by pressing `CTRL + ,`
-     ```json
-     {
-        "name": "VS Code",
-        "background": "#232323",
-        "black": "#000000",
-        "blue": "#579BD5",
-        "brightBlack": "#797979",
-        "brightBlue": "#9BDBFE",
-        "brightCyan": "#2BC4E2",
-        "brightGreen": "#1AD69C",
-        "brightPurple": "#DF89DD",
-        "brightRed": "#F6645D",
-        "brightWhite": "#EAEAEA",
-        "brightYellow": "#F6F353",
-        "cyan": "#00B6D6",
-        "foreground": "#D3D3D3",
-        "green": "#3FC48A",
-        "purple": "#CA5BC8",
-        "red": "#D8473F",
-        "white": "#EAEAEA",
-        "yellow": "#D7BA7D"
-     },
-     ```
-  3. Set default profile as following:
-     ```json
-     "defaults": {
-        "colorScheme": "VS Code",
-        "fontFace": "MesloLGS NF"
-     }
-     ```
-  4. Set `Azure Cloud Shell` and `Command Prompt` as hidden
+5. Check if the correct python version is installed via `python --version` command
 
-- Browsers
+## [Git](https://git-scm.com/)
 
-  - [Brave Browser](https://brave.com/): Browser for general web browsing
-  - [Chrome](https://www.google.com/chrome/): Broswer for general dev tools
-  - _Chrome Extensions_
-    - [JSONView](https://chrome.google.com/webstore/detail/jsonview/chklaanhfefbnpoihckbnefhakgolnmc?hl=en): Prettify JSON
-    - [Page Ruler](https://chrome.google.com/webstore/detail/page-ruler-redux/giejhjebcalaheckengmchjekofhhmal?hl=en): Pixel ruler
-    - [ColorZilla](https://chrome.google.com/webstore/detail/colorzilla/bhlhnicpbhignbdhedgjhgdocnmhomnp?hl=en): Color pallet
-    - [Vimium](https://chrome.google.com/webstore/detail/vimium/dbepggeogbaibhgnhhndojpepiihcmeb?hl=en): Borwser keyboard control
-    - [Daily Dev](https://daily.dev/): Daily dev news tab
-    - [Dark Reader](https://chrome.google.com/webstore/detail/dark-reader/eimadpbcbfnmbkopoojfekhnkhdbieeh?hl=en): Dark Mode on non-supported pages
-    - [Github Isometric Contributions](https://chrome.google.com/webstore/detail/github-isometric-contribu/mjoedlfflcchnleknnceiplgaeoegien): 3D Github grass
-    - [React Developer Tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en): Devtool for ReactJS
-    - [Redux Developer Tools](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd): Devtool for Redux
-    - [Wappalyzer](https://www.wappalyzer.com/download/): Analyze tech stack of a web page
-    - [Axe](https://chrome.google.com/webstore/detail/axe-web-accessibility-tes/lhdoppojpmngadmnindnejefpokejbdd): Accessibility Checker
-    - [Lighthouse](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk): Website analyzer (by Google)
-  - [Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/developer/): Browser for CSS dev tools
+1. Install [Git](https://git-scm.com/downloads)
 
-- Editors
+    possible with chocolatey command [![](https://img.shields.io/badge/Reference-green)](https://chocolatey.org/packages/git) <img src="https://chocolatey.org/content/images/global-shared/logo-square.svg" width="50"/>
 
-  - [Visual Studio Code](https://code.visualstudio.com/): Code Editor
-  - _VSC Extensions_
-    - Prettier
-    - ESLint
-    - Remote - WSL
-    - WakaTime
-    - Material Theme
-  - [Typora](https://typora.io/): Markdown Editing
+   ```sh
+   choco install git
+   ```
 
-- Archive Management
+2. Install [Github-cli](https://github.com/cli/cli) [![](https://img.shields.io/badge/Reference-green)](https://cli.github.com/manual/)
 
-  - [Bandizip](https://kr.bandisoft.com/bandizip/): Minimal archive program
+3. Install [Gitmoji-cli](https://github.com/carloscuesta/gitmoji-cli) using NPM ![](https://img.shields.io/badge/NPM%20required-red)
 
-- Multimedia
+   ```sh
+   npm i -g gitmoji-cli
+   ```
 
-  - [Kakao Pot Player](https://tv.kakao.com/guide/potplayer): Video player with basic codec support
-  - [VLC](https://www.videolan.org/vlc/index.html): Lightweight Audio / Video player
-  - [Audacity](https://www.audacityteam.org/download/): Audio editor
-  - [Honeyview](https://kr.bandisoft.com/honeyview/): Image viewer
-  - [Paint.NET](https://www.getpaint.net/): Minimal photo editor
+   Gitmoji-cli allow commit messages to have coherent emoji for readability
 
-- Task Management
+   ![](https://cloud.githubusercontent.com/assets/7629661/20454643/11eb9e40-ae47-11e6-90db-a1ad8a87b495.gif)
 
-  - [Notion](https://www.notion.so/): Task / Schedule management\
+   > gitmoji-cli in action
 
-- Web Development
+4. Configure git
 
-  - [WAMP](https://bitnami.com/stack/wamp/installer): WAMP Bitnami Server
+   Add `.gitconfig` file in `%HOME%` directory as following (*Add preferred aliases*: [![](https://img.shields.io/badge/Git%20reference-green)](https://git-scm.com/docs))
 
-- Miscellaneous
-  - [Postman](https://www.postman.com/): API Dev tool
-  - [Insomnia](https://insomnia.rest/): Rest client dev tool
-  - [DBeaver](https://dbeaver.io/): Universal database tool
-  - [Altair GraphQL Client](https://altair.sirmuel.design/): GraphQL Dev tool
-  - [Zeplin](https://zeplin.io/): Designer collaboration tool
-  - [DarkNamver](https://software.naver.com/software/summary.nhn?softwareId=GWS_000169): File name editor
-  - [Hoax Eliminator](https://teus.me/690): Eliminates Korean security hoax tools
-  - [모두의 프린터](https://modu-print.tistory.com/): Virtual Printer for creating PDF
+   ```toml
+   [user]
+   	email = YOUR_EMAIL
+   	name = YOUR_NAME
+   [core]
+       autocrlf = true
+   [alias]
+       co = checkout
+       c = commit
+       cm = commit -m
+       st = status
+       br = branch
+       hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short 
+       type = cat-file -t
+       dump = cat-file -p
+       pom = push origin master
+   
+   ```
 
-#### VSC Settings
+## Terminal
 
-##### [settings.json]
-```json
-{
-  "workbench.colorTheme": "Material Theme Darker High Contrast",
-  "workbench.iconTheme": "material-icon-theme",
-  "workbench.startupEditor": "newUntitledFile",
-  "terminal.integrated.fontFamily": "MesloLGS NF",
-  "terminal.integrated.shell.windows": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
-  "editor.formatOnSave": true,
-  "editor.fontSize": 18,
-  "workbench.colorCustomizations": {},
-  "prettier.packageManager": "yarn",
-  "emmet.includeLanguages": {
-    "javascript": "javascriptreact"
-  },
-  "javascript.updateImportsOnFileMove.enabled": "always",
-  "go.formatTool": "goimports",
-  "FSharp.useSdkScripts": true,
-  "explorer.confirmDelete": false,
-  "editor.fontFamily": "D2Coding",
-  "[html]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "editor.suggestSelection": "first",
-  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-  "java.semanticHighlighting.enabled": true,
-  "explorer.confirmDragAndDrop": false,
-  "todo-tree.tree.showScanModeButton": false,
-  "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "python.languageServer": "Microsoft",
-  "C_Cpp.updateChannel": "Insiders"
-}
-```
+1. Install [Windows Terminal](https://github.com/microsoft/terminal#installing-and-running-windows-terminal)
 
-##### [keybindings.json]
-```json
-[
-  {
-    "key": "ctrl+alt+oem_period",
-    "command": "workbench.action.terminal.focusNext"
-  },
-  {
-    "key": "ctrl+alt+oem_comma",
-    "command": "workbench.action.terminal.focusPrevious"
-  },
-  {
-    "key": "ctrl+`",
-    "command": "workbench.action.terminal.focus", 
-    "when": "!terminalFocus"
-  },
-  {
-    "key": "ctrl+`",
-    "command": "workbench.action.focusActiveEditorGroup", 
-    "when": "terminalFocus"
-  },
-  {
-    "key": "ctrl+shift+/",
-    "command": "editor.action.toggleWordWrap"
-  }
-]
-```
+2. Install [oh-my-posh](https://ohmyposh.dev/docs/installation) theme
 
-##### Git Settings
-> Following is my .gitconfig settings on ~
-```
-[user]
-    email = MY_EMAIL
-    name = MY_NAME
-[core]
-    autocrlf = true
-[alias]
-    co = checkout
-    c = commit
-    cm = commit -m
-    st = status
-    br = branch
-    hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short 
-    type = cat-file -t
-    dump = cat-file -p
-    pom = push origin master
-```
+   ![](https://ohmyposh.dev/assets/images/agnoster-2554ec80c8f34ce54a7dac6c1a2f111a.png)
 
-##### Vim Settings
-> Following is my .vimrc settings on ~
-```
-syntax on
+   > Oh-my-posh's Agnoster theme sample Image
 
-set noerrorbells
-set tabstop=4 softtabstop=4
-set shiftwidth=4
-set expandtab
-set smartindent
-set nu
-set nowrap
-set smartcase
-set noswapfile
-set nobackup
-set undodir=~/.vim/undodir
-set undofile
-set incsearch
+## Editor
 
-set colorcolumn=80
-highlight ColorColumn ctermbg=0 guibg=lightgrey
-```
+I've installed all of the following editors and use them for difference purposes. But you can pick the one you prefer.
 
-##### Powershelff $PROFILE settings
-> Following is my $PROFILE (MicrosoftPowerShell_profile.ps1) settings
-```ps
-$code = 
-{
-    # submit the host process RawUI interface and the execution context
-    param($RawUi)
+| Editor Name        | Description                                                  | Installation                                                 | Reference                                                    |
+| ------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| Visual Studio Code | [Electron](https://www.electronjs.org/) based editor recommended for all types of coding: has excellent extensions. I use it when working on large scale project. | [![](https://img.shields.io/badge/Install-blue)](https://code.visualstudio.com/) | [![](https://img.shields.io/badge/Reference-green)](https://code.visualstudio.com/docs) |
+| Sublime Text       | Lightweight editor, I use it to view single code file. Has an option to add `Open with Sublime Text` to the context menu for quick access. Also can access via CLI if added to windows environment variables with `subl filename.cpp` command. | [![](https://img.shields.io/badge/Install-blue)](https://www.sublimetext.com/) |                                                              |
+| Vim                | Terminal based editor, can be used for quick edit / view within the terminal. Can be really agile if used to short keys. | <img src="https://chocolatey.org/content/images/global-shared/logo-square.svg" width="50"/> |                                                              |
 
-    do
-    {
-        # compose the time and date display
-        $time = Get-Date -Format 'hh:mm:ss tt'
-        # output the information to the title bar of the host process
-        $RawUI.WindowTitle = $time
-        # wait a half second
-        Start-Sleep -Milliseconds 500
-    } while ($true)
-}
-$ps = [PowerShell]::Create()
-$null = $ps.AddScript($code).AddArgument($host.UI.RawUI)
-$handle = $ps.BeginInvoke()
+### Visual Studio Code
 
-$DefaultUser = 'USERNAME'
-Import-Module posh-git
-Import-Module oh-my-posh
-Set-Theme Agnoster
-
-$null = New-PSDrive -Name "wd" -PSProvider "filesystem" -Root  "WORKING_DIRECTORY"
-```
