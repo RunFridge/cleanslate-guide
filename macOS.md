@@ -141,7 +141,7 @@ alias weather = "curl wttr.in"
   	Plug 'wakatime/vim-wakatime'
   	" Visual Plugin
   	Plug 'ryanoasis/vim-devicons'
-  	" Syntax Highlight Plugins
+  	" Syntax Hisghlight Plugins
   	Plug 'scrooloose/syntastic'
   	Plug 'mxw/vim-jsx'
   	Plug 'jparise/vim-graphql'
