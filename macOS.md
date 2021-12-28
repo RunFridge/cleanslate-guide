@@ -29,10 +29,7 @@
 
   - 폰트 설치
 
-    - [MesloLGS NF Regular](https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS NF Regular.ttf)
-    - [MesloLGS NF Bold](https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS NF Bold.ttf)
-    - [MesloLGS NF Italic](https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS NF Italic.ttf)
-    - [MesloLGS NF Bold Italic](https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS NF Bold Italic.ttf)
+    - [MesloLGS NF](https://github.com/romkatv/powerlevel10k/blob/master/font.md)
 
   - 터미널에서 아래 커맨드로 테마 설정
 
@@ -140,7 +137,7 @@ alias weather = "curl wttr.in"
   	" Utility Plugins
   	Plug 'tpope/vim-surround'
   	Plug 'kien/ctrlp.vim'
-      Plug 'preservim/nerdtree'
+    Plug 'preservim/nerdtree'
   	Plug 'wakatime/vim-wakatime'
   	" Visual Plugin
   	Plug 'ryanoasis/vim-devicons'
